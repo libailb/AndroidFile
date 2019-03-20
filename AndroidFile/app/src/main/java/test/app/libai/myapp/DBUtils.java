@@ -9,6 +9,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
+/**
+ * git
+ */
 public class DBUtils {
     private static final String TAG = "DBUtils";
     private static Connection getConnection() {
