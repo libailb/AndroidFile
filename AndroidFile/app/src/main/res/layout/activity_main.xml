@@ -11,28 +11,34 @@
         android:background="@android:color/holo_blue_bright"
         android:text="温度"
         android:layout_width="match_parent"
-        android:layout_height="128dp" />
+        android:layout_height="100dp" />
     <TextView
         android:id="@+id/humidity"
         android:textSize="40sp"
         android:background="@android:color/holo_green_light"
         android:text="湿度"
         android:layout_width="match_parent"
-        android:layout_height="128dp" />
+        android:layout_height="100dp" />
     <TextView
         android:id="@+id/light"
         android:textSize="40sp"
         android:background="@android:color/holo_orange_light"
         android:text="光照"
         android:layout_width="match_parent"
-        android:layout_height="130dp" />
+        android:layout_height="100dp" />
     <TextView
         android:id="@+id/pressure"
         android:textSize="40sp"
         android:background="@android:color/holo_red_light"
         android:text="压力"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="100dp" />
 
+    <Button
+        android:id="@+id/btn_start_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开温度示意图"
+        />
 
 </LinearLayout>

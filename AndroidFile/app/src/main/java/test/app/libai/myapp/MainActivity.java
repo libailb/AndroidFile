@@ -1,11 +1,13 @@
 package test.app.libai.myapp;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +19,7 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
+    Button btn_temp;
     Runnable runnable=new Runnable() {
         @Override
         public void run() {
@@ -66,8 +69,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-                 new Thread(runnable).start();
+        new Thread(runnable).start();
+
+        btn_temp=findViewById(R.id.btn_start_temp);
+        btn_temp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,TempActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
                 }
+
             }
 
 
