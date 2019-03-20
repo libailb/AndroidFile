@@ -21,6 +21,18 @@
         <activity android:name=".TempActivity">
 
         </activity>
+        <activity android:name=".HumidityActivity">
+
+        </activity>
+        <activity android:name=".LightActivity">
+
+        </activity>
+        <activity android:name=".PressureActivity">
+
+        </activity>
+
+
+
     </application>
 
 </manifest>

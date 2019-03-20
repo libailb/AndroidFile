@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/temperature"
+        android:textSize="40sp"
+        android:background="@android:color/holo_red_light"
+        android:text="压力"
+        android:layout_width="match_parent"
+        android:layout_height="128dp" />
+
+    <Button
+        android:id="@+id/btn_start_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回主界面"
+        />
+
+
+</LinearLayout>
