@@ -11,7 +11,8 @@
         android:background="@android:color/holo_blue_bright"
         android:text="温度"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         />
     <Button
         android:id="@+id/btn_humidity"
@@ -19,20 +20,23 @@
         android:background="@android:color/holo_green_light"
         android:text="湿度"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
     <Button
         android:id="@+id/btn_light"
         android:textSize="40sp"
         android:background="@android:color/holo_orange_light"
         android:text="光照"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
     <Button
         android:id="@+id/btn_pressure"
         android:textSize="40sp"
         android:background="@android:color/holo_red_light"
         android:text="压力"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
 </LinearLayout>
