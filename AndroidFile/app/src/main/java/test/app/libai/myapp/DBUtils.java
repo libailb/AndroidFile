@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.HashMap;
 
 /**
- * git
+ * git status
  */
 public class DBUtils {
     private static final String TAG = "DBUtils";
