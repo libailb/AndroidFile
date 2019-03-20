@@ -4,20 +4,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/temperature"
-        android:textSize="40sp"
+    <Button
+        android:id="@+id/btn_start_temp"
+        android:textSize="20sp"
         android:background="@android:color/holo_blue_bright"
         android:text="温度"
         android:layout_width="match_parent"
-        android:layout_height="128dp" />
-
-    <Button
-        android:id="@+id/btn_start_temp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="返回主界面"
+        android:layout_height="40dp"
         />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
 
 
 </LinearLayout>
