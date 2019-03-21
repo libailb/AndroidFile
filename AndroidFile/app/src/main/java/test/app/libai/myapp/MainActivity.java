@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                         msg.obj = list;
                     }
                     handler.sendMessage(msg);
-                    Thread.sleep(10000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
