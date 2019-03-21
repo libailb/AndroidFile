@@ -5,8 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="节点1"
+        android:textSize="20sp"
+        android:background="@android:color/holo_blue_bright"
+        />
     <Button
-        android:id="@+id/btn_temp"
+        android:id="@+id/btn_temp1"
         android:textSize="40sp"
         android:background="@android:color/holo_blue_bright"
         android:text="温度"
@@ -15,28 +23,91 @@
         android:layout_weight="1"
         />
     <Button
-        android:id="@+id/btn_humidity"
+        android:id="@+id/btn_humidity1"
+        android:textSize="40sp"
+        android:background="@android:color/holo_blue_bright"
+        android:text="湿度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="节点2"
+        android:textSize="20sp"
+        android:background="@android:color/holo_green_light"
+        />
+    <Button
+        android:id="@+id/btn_temp2"
+        android:textSize="40sp"
+        android:background="@android:color/holo_green_light"
+        android:text="温度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btn_humidity2"
         android:textSize="40sp"
         android:background="@android:color/holo_green_light"
         android:text="湿度"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="节点3"
+        android:textSize="20sp"
+        android:background="@android:color/holo_orange_light"
+        />
     <Button
-        android:id="@+id/btn_light"
+        android:id="@+id/btn_temp3"
         android:textSize="40sp"
         android:background="@android:color/holo_orange_light"
-        android:text="光照"
+        android:text="温度"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        />
     <Button
-        android:id="@+id/btn_pressure"
+        android:id="@+id/btn_humidity3"
+        android:textSize="40sp"
+        android:background="@android:color/holo_orange_light"
+        android:text="湿度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="节点4"
+        android:textSize="20sp"
+        android:background="@android:color/holo_red_light"
+        />
+    <Button
+        android:id="@+id/btn_temp4"
         android:textSize="40sp"
         android:background="@android:color/holo_red_light"
-        android:text="压力"
+        android:text="温度"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btn_humidity4"
+        android:textSize="40sp"
+        android:background="@android:color/holo_red_light"
+        android:text="湿度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
 
 </LinearLayout>
