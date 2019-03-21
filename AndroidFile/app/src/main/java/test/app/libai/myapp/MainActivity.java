@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                         msg.obj = list;
                     }
                     handler.sendMessage(msg);
-                    Thread.sleep(1000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -135,6 +135,73 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_temp2=findViewById(R.id.btn_temp2);
+        btn_temp2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,TempActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_humidity2=findViewById(R.id.btn_humidity2);
+        btn_humidity2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,HumidityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_temp3=findViewById(R.id.btn_temp3);
+        btn_temp3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,TempActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_humidity3=findViewById(R.id.btn_humidity3);
+        btn_humidity3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,HumidityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_temp4=findViewById(R.id.btn_temp4);
+        btn_temp4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,TempActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_humidity4=findViewById(R.id.btn_humidity4);
+        btn_humidity4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //在这里转到对应的Activity
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,HumidityActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
                 }

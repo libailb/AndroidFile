@@ -41,10 +41,6 @@ public class DBUtils {
             String sql4 = "SELECT * FROM aliyun4 WHERE id = (SELECT MAX(id) FROM aliyun4);";
 
             ResultSet res1 = st.executeQuery(sql1);
-            ResultSet res2 = st.executeQuery(sql2);
-            ResultSet res3 = st.executeQuery(sql3);
-            ResultSet res4 = st.executeQuery(sql4);
-
             if (res1 == null) {
                 return null;
             } else {
@@ -54,37 +50,44 @@ public class DBUtils {
                     map.put("humi",res1.getFloat("humi"));
                     list.add(map);
                 }
+                res1.close();
+            ResultSet res2 = st.executeQuery(sql2);
             if (res2 == null) {
                 return null;
             } else {
                 HashMap<String,Float> map = new HashMap<>();
-                res1.next();
+                res2.next();
                 map.put("temp",res2.getFloat("temp"));
                 map.put("humi",res2.getFloat("humi"));
                 list.add(map);
             }
+            res2.close();
+            ResultSet res3 = st.executeQuery(sql3);
             if (res3 == null) {
                 return null;
             } else {
                 HashMap<String,Float> map = new HashMap<>();
-                res1.next();
+                res3.next();
                 map.put("temp",res3.getFloat("temp"));
                 map.put("humi",res3.getFloat("humi"));
                 list.add(map);
             }
+            res3.close();
+            ResultSet res4 = st.executeQuery(sql4);
             if (res4 == null) {
                 return null;
             } else {
                 HashMap<String,Float> map = new HashMap<>();
-                res1.next();
+                res4.next();
                 map.put("temp",res4.getFloat("temp"));
                 map.put("humi",res4.getFloat("humi"));
                 list.add(map);
             }
+            res4.close();
+            st.close();
                 conn.close();
-                st.close();
-                res1.close();
-            res2.close();res3.close();res4.close();
+
+
 
                 return list;
             } catch (Exception e) {
