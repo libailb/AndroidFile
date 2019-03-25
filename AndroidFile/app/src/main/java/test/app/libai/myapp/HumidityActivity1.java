@@ -1,6 +1,7 @@
 package test.app.libai.myapp;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -157,7 +158,7 @@ public class HumidityActivity1 extends Activity {
         }
 
         // y轴数据集
-        LineDataSet mLineDataSet = new LineDataSet(y, "前24小时湿度数据集");
+        LineDataSet mLineDataSet = new LineDataSet(y, "前24小时湿度数据集 单位:%");
 
 
         // 用y轴的集合来设置参数
@@ -205,8 +206,8 @@ public class HumidityActivity1 extends Activity {
 
             @Override
             public String getFormattedValue(float value) {
-                // int n = (int) value;
-                String s = value + "%";
+                DecimalFormat df = new DecimalFormat("0.00");
+                String s = df.format(value).toString();
                 return s;
             }
         });

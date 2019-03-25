@@ -7,7 +7,7 @@
 
     <Button
         android:id="@+id/btn_start_temp"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@android:color/holo_orange_light"
         android:text="返回主界面"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

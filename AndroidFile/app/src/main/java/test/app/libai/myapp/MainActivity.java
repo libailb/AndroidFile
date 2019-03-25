@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TempActivity1.class);
+                intent.setClass(MainActivity.this, TempActivity2.class);
                 startActivity(intent);
             }
         });
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, HumidityActivity1.class);
+                intent.setClass(MainActivity.this, HumidityActivity2.class);
                 startActivity(intent);
             }
         });
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TempActivity1.class);
+                intent.setClass(MainActivity.this, TempActivity3.class);
                 startActivity(intent);
             }
         });
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, HumidityActivity1.class);
+                intent.setClass(MainActivity.this, HumidityActivity3.class);
                 startActivity(intent);
             }
         });
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TempActivity1.class);
+                intent.setClass(MainActivity.this, TempActivity4.class);
                 startActivity(intent);
             }
         });
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, HumidityActivity1.class);
+                intent.setClass(MainActivity.this, HumidityActivity4.class);
                 startActivity(intent);
             }
         });

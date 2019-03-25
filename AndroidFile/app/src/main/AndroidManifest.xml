@@ -26,6 +26,17 @@
 
         </activity>
 
+        <activity android:name=".TempActivity2"></activity>
+
+        <activity android:name=".TempActivity3"></activity>
+
+        <activity android:name=".TempActivity4"></activity>
+
+        <activity android:name=".HumidityActivity2"></activity>
+
+        <activity android:name=".HumidityActivity3"></activity>
+
+        <activity android:name=".HumidityActivity4"></activity>
 
     </application>
 

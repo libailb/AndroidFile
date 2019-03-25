@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -27,12 +28,12 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 
-public class TempActivity1 extends Activity {
+public class HumidityActivity3 extends Activity {
     Button btn_main;
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            List<Float> y2 = DBUtils02.getList("aliyun1", "temp");
+            List<Float> y2 = DBUtils02.getList("aliyun1", "humi");
             Message msg = new Message();
             if (y2 == null) {
                 msg.what = 0;
@@ -44,7 +45,6 @@ public class TempActivity1 extends Activity {
             handler.sendMessage(msg);
         }
     };
-
     Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -61,20 +61,18 @@ public class TempActivity1 extends Activity {
         }
     });
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_humi3);
         new Thread(runnable).start();
-
         btn_main = findViewById(R.id.btn_start_temp);
         btn_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(TempActivity1.this, MainActivity.class);
+                intent.setClass(HumidityActivity3.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -86,7 +84,7 @@ public class TempActivity1 extends Activity {
         // 是否在折线图上添加边框
         mLineChart.setDrawBorders(false);
 
-        mLineChart.setDescription("温度显示");// 数据描述
+        mLineChart.setDescription("湿度显示");// 数据描述
 
         // 如果没有数据的时候，会显示这个，类似listview的emtpyview
         mLineChart.setNoDataTextDescription("获取数据为空");
@@ -106,8 +104,7 @@ public class TempActivity1 extends Activity {
         // 缩放
         mLineChart.setScaleEnabled(true);
 
-        mLineChart.setDragDecelerationFrictionCoef(0.9f);
-        mLineChart.setPinchZoom(true);
+        mLineChart.setPinchZoom(false);
 
         // 设置背景
         mLineChart.setBackgroundColor(color);
@@ -126,12 +123,10 @@ public class TempActivity1 extends Activity {
 
         // 将X坐标轴的标尺刻度移动底部。
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-
         YAxis yAxisleft = mLineChart.getAxisLeft();
-        yAxisleft.setStartAtZero(false);
-        yAxisleft.setAxisMinValue(-20);
-        yAxisleft.setAxisMaxValue(50f);
-        yAxisleft.setLabelCount(8, true);
+        yAxisleft.setAxisMinValue(0);
+        yAxisleft.setAxisMaxValue(100);
+        yAxisleft.setLabelCount(11, true);
         YAxis yAxisright = mLineChart.getAxisRight();
         yAxisright.setEnabled(false);
         // 沿x轴动画，时间2000毫秒。
@@ -163,7 +158,7 @@ public class TempActivity1 extends Activity {
         }
 
         // y轴数据集
-        LineDataSet mLineDataSet = new LineDataSet(y, "前24小时温度数据集 单位:℃");
+        LineDataSet mLineDataSet = new LineDataSet(y, "前24小时湿度数据集 单位:%");
 
 
         // 用y轴的集合来设置参数

@@ -9,7 +9,7 @@
         android:id="@+id/btn_start_temp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_light"
+        android:background="@android:color/holo_blue_bright"
         android:text="返回主界面" />
 
     <com.github.mikephil.charting.charts.LineChart

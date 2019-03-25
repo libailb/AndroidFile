@@ -1,23 +1,5 @@
 package test.app.libai.myapp;
 
-import java.text.DateFormat;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.Legend.LegendForm;
-import com.github.mikephil.charting.components.Legend.LegendPosition;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.utils.ValueFormatter;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -27,7 +9,24 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 
-public class TempActivity1 extends Activity {
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.utils.ValueFormatter;
+
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class TempActivity4 extends Activity {
+
     Button btn_main;
     Runnable runnable = new Runnable() {
         @Override
@@ -65,7 +64,7 @@ public class TempActivity1 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_temp4);
         new Thread(runnable).start();
 
         btn_main = findViewById(R.id.btn_start_temp);
@@ -74,7 +73,7 @@ public class TempActivity1 extends Activity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(TempActivity1.this, MainActivity.class);
+                intent.setClass(TempActivity4.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -118,8 +117,8 @@ public class TempActivity1 extends Activity {
         // 设置比例图标示，就是那个一组y的value的
         Legend mLegend = mLineChart.getLegend();
 
-        mLegend.setPosition(LegendPosition.BELOW_CHART_CENTER);
-        mLegend.setForm(LegendForm.CIRCLE);// 样式
+        mLegend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
+        mLegend.setForm(Legend.LegendForm.CIRCLE);// 样式
         mLegend.setFormSize(15.0f);// 字体
         mLegend.setTextColor(Color.BLUE);// 颜色
         XAxis xAxis = mLineChart.getXAxis();
@@ -224,5 +223,6 @@ public class TempActivity1 extends Activity {
 
         return mLineData;
     }
+
 
 }
