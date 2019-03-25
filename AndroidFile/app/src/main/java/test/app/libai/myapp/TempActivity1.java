@@ -31,12 +31,12 @@ public class TempActivity1 extends Activity {
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            List<Float> y2 =  DBUtils02.getList("aliyun1","temp");
+            List<Float> y2 = DBUtils02.getList("aliyun1", "temp");
             Message msg = new Message();
-            if(y2 == null){
+            if (y2 == null) {
                 msg.what = 0;
                 msg.obj = null;
-            }else{
+            } else {
                 msg.what = 1;
                 msg.obj = y2;
             }
@@ -53,7 +53,7 @@ public class TempActivity1 extends Activity {
             LineChart chart = (LineChart) findViewById(R.id.chart);
 
             // 制作7个数据点（沿x坐标轴）
-            LineData mLineData = makeLineData(24,y2);
+            LineData mLineData = makeLineData(24, y2);
             setChartStyle(chart, mLineData, Color.WHITE);
 
             return false;
@@ -130,7 +130,7 @@ public class TempActivity1 extends Activity {
         yAxisleft.setStartAtZero(false);
         yAxisleft.setAxisMinValue(-20);
         yAxisleft.setAxisMaxValue(50f);
-        yAxisleft.setLabelCount(8,true);
+        yAxisleft.setLabelCount(8, true);
         YAxis yAxisright = mLineChart.getAxisRight();
         yAxisright.setEnabled(false);
         // 沿x轴动画，时间2000毫秒。
@@ -138,16 +138,15 @@ public class TempActivity1 extends Activity {
     }
 
     /**
-     * @param count
-     *            数据点的数量。
+     * @param count 数据点的数量。
      * @return
      */
-    private LineData makeLineData(int count,List<Float> y2) {
+    private LineData makeLineData(int count, List<Float> y2) {
         ArrayList<String> x = new ArrayList<String>();
         DateFormat df = new SimpleDateFormat("dd HH");
         Long current = System.currentTimeMillis();
         Long hour = 60 * 60 * 1000L;
-        for (int i = count; i >=1; i--) {
+        for (int i = count; i >= 1; i--) {
             Long time = current - hour * i;
             Date d = new Date(time);
             String s = df.format(d);
@@ -164,7 +163,6 @@ public class TempActivity1 extends Activity {
 
         // y轴数据集
         LineDataSet mLineDataSet = new LineDataSet(y, "前24小时温度数据集");
-
 
 
         // 用y轴的集合来设置参数
