@@ -4,20 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/temperature"
-        android:textSize="40sp"
-        android:background="@android:color/holo_green_light"
-        android:text="湿度"
-        android:layout_width="match_parent"
-        android:layout_height="128dp" />
-
     <Button
         android:id="@+id/btn_start_temp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
         android:text="返回主界面"
         />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>

@@ -18,16 +18,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TempActivity">
+        <activity android:name=".TempActivity1">
 
         </activity>
-        <activity android:name=".HumidityActivity">
-
-        </activity>
-        <activity android:name=".LightActivity">
-
-        </activity>
-        <activity android:name=".PressureActivity">
+        <activity android:name=".HumidityActivity1">
 
         </activity>
 

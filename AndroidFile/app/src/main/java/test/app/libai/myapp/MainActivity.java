@@ -5,22 +5,17 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
+
    //温度页面按钮
     Button btn_temp1;
     //湿度页面按钮
@@ -53,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     handler.sendMessage(msg);
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
 
@@ -120,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,TempActivity.class);
+                intent.setClass(MainActivity.this,TempActivity1.class);
                 startActivity(intent);
             }
         });
@@ -131,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,HumidityActivity.class);
+                intent.setClass(MainActivity.this,HumidityActivity1.class);
                 startActivity(intent);
             }
         });
@@ -142,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,TempActivity.class);
+                intent.setClass(MainActivity.this,TempActivity1.class);
                 startActivity(intent);
             }
         });
@@ -153,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,HumidityActivity.class);
+                intent.setClass(MainActivity.this,HumidityActivity1.class);
                 startActivity(intent);
             }
         });
@@ -164,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,TempActivity.class);
+                intent.setClass(MainActivity.this,TempActivity1.class);
                 startActivity(intent);
             }
         });
@@ -175,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,HumidityActivity.class);
+                intent.setClass(MainActivity.this,HumidityActivity1.class);
                 startActivity(intent);
             }
         });
@@ -186,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,TempActivity.class);
+                intent.setClass(MainActivity.this,TempActivity1.class);
                 startActivity(intent);
             }
         });
@@ -197,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //在这里转到对应的Activity
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,HumidityActivity.class);
+                intent.setClass(MainActivity.this,HumidityActivity1.class);
                 startActivity(intent);
             }
         });
